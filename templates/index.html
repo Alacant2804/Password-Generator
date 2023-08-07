@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+
+    <!-- Including Bootstrap CSS for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Including our custom CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container py-5">
+        <h2 class="text-center">Password Generator</h2>
+
+        <div class="row mt-5">
+            <div class="col-md-6 offset-md-3">
+                <form id="password-form">
+                    <div class="form-group">
+                        <label for="length">Password Length:</label>
+                        <input type="range" class="custom-range" id="length" min="8" max="64" value="12">
+                        <small id="lengthHelp" class="form-text text-muted">Length: <span id="length-display">12</span></small>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="include_uppercase" checked>
+                        <label class="form-check-label" for="include_uppercase">Include Uppercase Letters</label>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="include_lowercase" checked>
+                        <label class="form-check-label" for="include_lowercase">Include Lowercase Letters</label>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="include_numbers" checked>
+                        <label class="form-check-label" for="include_numbers">Include Numbers</label>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="include_symbols" checked>
+                        <label class="form-check-label" for="include_symbols">Include Symbols</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password-field">Your password:</label>
+                        <input type="text" class="form-control" id="password-field" readonly>
+                    </div>
+
+                    <button id="copy" class="btn btn-secondary">Copy</button>
+                    <button id="refresh" class="btn btn-secondary">Refresh Page</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Including jQuery for AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Including our custom JavaScript file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
