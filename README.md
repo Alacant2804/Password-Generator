@@ -40,7 +40,7 @@ By using Password Generator, you can improve your digital security with password
 
 Feedback and Support
 
-Your feedback is invaluable. Should you encounter any challenges or have enhancement ideas, don't hesitate to connect. A devoted support mechanism is in place to provide timely assistance and to integrate worthwhile feedback.
+Your feedback is invaluable. Should you encounter any challenges or have enhancement ideas, don't hesitate to connect. 
 
 Stay Secure
 
