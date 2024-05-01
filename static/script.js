@@ -1,11 +1,11 @@
 $(document).ready(function() {
   // AJAX call to the server to generate a password
   function generatePassword() {
-    var length = $('#length').val();
-    var include_uppercase = $('#include_uppercase').is(':checked');
-    var include_lowercase = $('#include_lowercase').is(':checked');
-    var include_numbers = $('#include_numbers').is(':checked');
-    var include_symbols = $('#include_symbols').is(':checked');
+    let length = $('#length').val();
+    let include_uppercase = $('#include_uppercase').is(':checked');
+    let include_lowercase = $('#include_lowercase').is(':checked');
+    let include_numbers = $('#include_numbers').is(':checked');
+    let include_symbols = $('#include_symbols').is(':checked');
 
     $.ajax({
         url: '/generate_password',
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
   $('#copy').click(function(event) {
     event.preventDefault(); // Prevent the default form submission and page refresh
-    var copyText = document.getElementById("password-field");
+    let copyText = document.getElementById("password-field");
     copyText.select();
     copyText.setSelectionRange(0, 99999); /* For mobile devices */
     document.execCommand("copy");
