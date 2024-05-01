@@ -39,7 +39,7 @@ $(document).ready(function() {
   });
 
   $('#copy').click(function(event) {
-    event.preventDefault(); // Prevent the default form submission and page refresh
+    event.preventDefault();
     let copyText = document.getElementById("password-field");
     copyText.select();
     copyText.setSelectionRange(0, 99999); /* For mobile devices */
